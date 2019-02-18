@@ -1,0 +1,17 @@
+version: 2.1
+
+jobs:
+  hello:
+    docker:
+      - image: debian:stretch-slim
+    steps:
+      - run: echo 'Hello, world'
+
+
+workflows:
+  cron:
+    triggers:
+      - schedule:
+          cron: '*/5 * * * *'
+    jobs:
+      - hello
