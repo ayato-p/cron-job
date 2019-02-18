@@ -1,4 +1,4 @@
-version: 2.1
+version: 2
 
 jobs:
   hello:
@@ -9,6 +9,7 @@ jobs:
 
 
 workflows:
+  version: 2
   cron:
     triggers:
       - schedule:
